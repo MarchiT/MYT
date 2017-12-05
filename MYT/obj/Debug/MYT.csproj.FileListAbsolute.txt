@@ -1,0 +1,17 @@
+D:\Programming\WPF\Repos\MYT\bin\Debug\MYT.exe.config
+D:\Programming\WPF\Repos\MYT\bin\Debug\MYT.exe
+D:\Programming\WPF\Repos\MYT\bin\Debug\MYT.pdb
+D:\Programming\WPF\Repos\MYT\bin\Debug\ImageProcessor.dll
+D:\Programming\WPF\Repos\MYT\bin\Debug\ImageProcessor.xml
+D:\Programming\WPF\Repos\MYT\obj\Debug\MYT.csprojResolveAssemblyReference.cache
+D:\Programming\WPF\Repos\MYT\obj\Debug\MainWindow.g.cs
+D:\Programming\WPF\Repos\MYT\obj\Debug\App.g.cs
+D:\Programming\WPF\Repos\MYT\obj\Debug\MYT_MarkupCompile.cache
+D:\Programming\WPF\Repos\MYT\obj\Debug\MYT_MarkupCompile.lref
+D:\Programming\WPF\Repos\MYT\obj\Debug\MainWindow.baml
+D:\Programming\WPF\Repos\MYT\obj\Debug\MYT.g.resources
+D:\Programming\WPF\Repos\MYT\obj\Debug\MYT.Properties.Resources.resources
+D:\Programming\WPF\Repos\MYT\obj\Debug\MYT.csproj.GenerateResource.Cache
+D:\Programming\WPF\Repos\MYT\obj\Debug\MYT.csproj.CoreCompileInputs.cache
+D:\Programming\WPF\Repos\MYT\obj\Debug\MYT.exe
+D:\Programming\WPF\Repos\MYT\obj\Debug\MYT.pdb

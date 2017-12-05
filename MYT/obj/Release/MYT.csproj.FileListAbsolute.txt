@@ -1,0 +1,16 @@
+D:\Programming\WPF\MYT\MYT\bin\Release\MYT.exe.config
+D:\Programming\WPF\MYT\MYT\bin\Release\MYT.exe
+D:\Programming\WPF\MYT\MYT\bin\Release\MYT.pdb
+D:\Programming\WPF\MYT\MYT\bin\Release\ImageProcessor.dll
+D:\Programming\WPF\MYT\MYT\bin\Release\ImageProcessor.xml
+D:\Programming\WPF\MYT\MYT\obj\Release\MainWindow.g.cs
+D:\Programming\WPF\MYT\MYT\obj\Release\App.g.cs
+D:\Programming\WPF\MYT\MYT\obj\Release\MYT_MarkupCompile.cache
+D:\Programming\WPF\MYT\MYT\obj\Release\MYT_MarkupCompile.lref
+D:\Programming\WPF\MYT\MYT\obj\Release\MainWindow.baml
+D:\Programming\WPF\MYT\MYT\obj\Release\MYT.g.resources
+D:\Programming\WPF\MYT\MYT\obj\Release\MYT.Properties.Resources.resources
+D:\Programming\WPF\MYT\MYT\obj\Release\MYT.csproj.GenerateResource.Cache
+D:\Programming\WPF\MYT\MYT\obj\Release\MYT.csproj.CoreCompileInputs.cache
+D:\Programming\WPF\MYT\MYT\obj\Release\MYT.exe
+D:\Programming\WPF\MYT\MYT\obj\Release\MYT.pdb
