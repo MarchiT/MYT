@@ -20,6 +20,7 @@ using ImageProcessor.Imaging.Filters.EdgeDetection;
 using ImageProcessor.Imaging.Filters.Photo;
 using System.Drawing;
 using System.Windows.Interop;
+using MYT.ImageOperations;
 
 namespace MYT
 {
@@ -34,63 +35,51 @@ namespace MYT
         }
 
         private string _imgPath = null;
+        private BitmapImage _processedImage = null;
+        private ProcessedImage _processedWindow = null;
+
 
         private bool Load()
         {
             return _imgPath != null;
         }
 
-        private BitmapImage ProcessImg(IMatrixFilter filter)
+        private void NotLoadedMessage()
         {
-            byte[] photoBytes = File.ReadAllBytes(_imgPath);
-            // Format is automatically detected though can be changed.
-            ISupportedImageFormat format = new JpegFormat { Quality = 70 };
-            //System.Drawing.Size size = new System.Drawing.Size(150, 0);
-            using (MemoryStream inStream = new MemoryStream(photoBytes))
-            {
-                using (MemoryStream outStream = new MemoryStream())
-                {
-                    // Initialize the ImageFactory using the overload to preserve EXIF metadata.
-                    using (ImageFactory imageFactory = new ImageFactory(preserveExifData: true))
-                    {
-                        imageFactory.Load(inStream)
-                                    //.Resize(size)
-                                    .Format(format)
-                                    .Filter(filter)
-                                    .Save(outStream);
-                    }
-
-                    return ToBitmap(outStream);
-                }
-            }
+            MessageBox.Show("Image is not loaded!");
         }
 
-        private BitmapImage ToBitmap(MemoryStream outStream)
+        private void DisplayProcessedWindow()
         {
-            outStream.Seek(0, SeekOrigin.Begin);
+            if (_processedWindow == null || !_processedWindow.IsVisible)
+                _processedWindow = new ProcessedImage { Owner = this };
 
-            var bitmapImage = new BitmapImage();
-            bitmapImage.BeginInit();
-            bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
-            bitmapImage.StreamSource = outStream;
-            bitmapImage.EndInit();
-
-            return bitmapImage;
+            _processedWindow.image.Source = _processedImage;
+            _processedWindow.Show();
         }
+
+
 
         private void btnLoad_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog op = new OpenFileDialog();
             op.Title = "Select a picture";
             op.Filter = "All supported graphics|*.jpg;*.jpeg;*.png|" +
-              "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" +
-              "Portable Network Graphic (*.png)|*.png";
+                "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" +
+                "Portable Network Graphic (*.png)|*.png";
 
             if (op.ShowDialog() == true)
             {
                 _imgPath = op.FileName;
-                sourceImg.Source = new BitmapImage(new Uri(_imgPath));
-                processedImg.Source = new BitmapImage(new Uri(_imgPath));
+                //sourceImg.Source = new BitmapImage(new Uri(_imgPath));
+                //processedImg.Source = new BitmapImage(new Uri(_imgPath));
+
+                OriginalImage imageWindow = new OriginalImage { Owner = this };
+                imageWindow.image.Source = new BitmapImage(new Uri(_imgPath));
+
+                imageWindow.Show();
+
+                ImageModifications.Initialize(_imgPath);
             }
         }
 
@@ -98,15 +87,29 @@ namespace MYT
         {
             if (Load())
             {
-                processedImg.Source = new BitmapImage(new Uri(_imgPath));
+                //processedImg.Source = new BitmapImage(new Uri(_imgPath));
+                _processedImage = new BitmapImage(new Uri(_imgPath));
+                DisplayProcessedWindow();
+
+                ImageModifications.Initialize(_imgPath);
+            } else
+            {
+                NotLoadedMessage();
             }
         }
+
+
 
         private void btnFilterComic_Click(object sender, RoutedEventArgs e)
         {
             if (Load())
             {
-                processedImg.Source = ProcessImg(MatrixFilters.Comic);
+                //processedImg.Source = ProcessImg(MatrixFilters.Comic);
+                _processedImage = ImageModifications.Filter(MatrixFilters.Comic);
+                DisplayProcessedWindow();
+            } else
+            {
+                NotLoadedMessage();
             }
         }
 
@@ -114,7 +117,12 @@ namespace MYT
         {
             if (Load())
             {
-                processedImg.Source = ProcessImg(MatrixFilters.BlackWhite);
+                _processedImage = ImageModifications.Filter(MatrixFilters.BlackWhite);
+                DisplayProcessedWindow();
+            }
+            else
+            {
+                NotLoadedMessage();
             }
         }
 
@@ -122,7 +130,12 @@ namespace MYT
         {
             if (Load())
             {
-                processedImg.Source = ProcessImg(MatrixFilters.HiSatch);
+                _processedImage = ImageModifications.Filter(MatrixFilters.HiSatch);
+                DisplayProcessedWindow();
+            }
+            else
+            {
+                NotLoadedMessage();
             }
         }
 
@@ -130,13 +143,119 @@ namespace MYT
         {
             if (Load())
             {
-                processedImg.Source = ProcessImg(MatrixFilters.Invert);
+                _processedImage = (ImageModifications.Filter(MatrixFilters.Invert));
+                DisplayProcessedWindow();
+            }
+            else
+            {
+                NotLoadedMessage();
             }
         }
 
-        private void btnASCII_Click(object sender, RoutedEventArgs e)
+        private void btnLomograph_Click(object sender, RoutedEventArgs e)
         {
+            if (Load())
+            {
+                _processedImage = ImageModifications.Filter(MatrixFilters.Lomograph);
+                DisplayProcessedWindow();
+            }
+            else
+            {
+                NotLoadedMessage();
+            }
+        }
 
+        private void btnPolaroid_Click(object sender, RoutedEventArgs e)
+        {
+            if (Load())
+            {
+                _processedImage = ImageModifications.Filter(MatrixFilters.Polaroid);
+                DisplayProcessedWindow();
+            }
+            else
+            {
+                NotLoadedMessage();
+            }
+        }
+
+        private void btnLoSatch_Click(object sender, RoutedEventArgs e)
+        {
+            if (Load())
+            {
+                _processedImage = ImageModifications.Filter(MatrixFilters.LoSatch);
+                DisplayProcessedWindow();
+            }
+            else
+            {
+                NotLoadedMessage();
+            }
+        }
+
+        private void btnSepia_Click(object sender, RoutedEventArgs e)
+        {
+            if (Load())
+            {
+                _processedImage = ImageModifications.Filter(MatrixFilters.Sepia);
+                DisplayProcessedWindow();
+            }
+            else
+            {
+                NotLoadedMessage();
+            }
+        }
+
+        private void btnPixelate_Click(object sender, RoutedEventArgs e)
+        {
+            if (Load())
+            {
+                _processedImage = ImageModifications.Pixelate(8);
+                DisplayProcessedWindow();
+            }
+            else
+            {
+                NotLoadedMessage();
+            }
+        }
+
+        private void btnQuality_Click(object sender, RoutedEventArgs e)
+        {
+            if (Load())
+            {
+                _processedImage = ImageModifications.Quality(5);
+                DisplayProcessedWindow();
+            }
+            else
+            {
+                NotLoadedMessage();
+            }
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e) //TODO fix
+        {
+            if (Load())
+            {
+                // Displays a SaveFileDialog so the user can save the Image
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif";
+                saveFileDialog1.Title = "Save an Image File";
+                saveFileDialog1.ShowDialog();
+
+                // If the file name is not an empty string open it for saving.  
+                if (saveFileDialog1.FileName != "")
+                {
+                    FileStream fs = (FileStream)saveFileDialog1.OpenFile();
+
+                    //System.Drawing.Image.FromFile(@"D:\temp.png").
+                    Converter.BitmapSourceToBitmap(_processedImage).
+                        Save(fs, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+                    fs.Close();
+                }
+            }
+            else
+            {
+                NotLoadedMessage();
+            }
         }
     }
 }

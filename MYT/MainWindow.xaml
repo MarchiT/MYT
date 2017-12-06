@@ -5,27 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MYT"
         mc:Ignorable="d"
-        Title="MYT" Height="700" Width="1000">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="18*"/>
-            <RowDefinition Height="628*"/>
-            <RowDefinition Height="18*"/>
-        </Grid.RowDefinitions>
+        Title="MYT" Height="700" Width="350">
+    <Grid Margin="0,0,-8,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="51*" />
-            <ColumnDefinition Width="530*" />
-            <ColumnDefinition Width="360*"/>
-            <ColumnDefinition Width="51*" />
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="145*"/>
+            <ColumnDefinition Width="145*"/>
+            <ColumnDefinition Width="30*"/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="sourceImg" Grid.Column="1" Grid.Row="1" Stretch="UniformToFill" Margin="0,0,0,316"/>
-        <Image x:Name="processedImg" Grid.Column="1" Grid.Row="1" Stretch="UniformToFill" Margin="0,316,0,0"/>
-        <Button Height="22" HorizontalAlignment="Center" Margin="147,37,137,574" Name="btnLoad" VerticalAlignment="Center" Width="76" Grid.Column="2" Click="btnLoad_Click" Grid.Row="1">_Load</Button>
-        <Button x:Name="btnReset" Content="Reset Image" Grid.Column="2" HorizontalAlignment="Left" Margin="149,77,0,0" Grid.Row="1" VerticalAlignment="Top" Width="74" Click="btnReset_Click"/>
-        <Button x:Name="btnASCII" Content="Convert To ASCII" Grid.Column="2" HorizontalAlignment="Left" Margin="59,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="247" Click="btnASCII_Click"/>
-        <Button x:Name="btnFilterBlackWhite" Content="Black White" Grid.Column="2" HorizontalAlignment="Left" Margin="59,206,0,0" Grid.Row="1" VerticalAlignment="Top" Width="247" Click="btnFilterBlackWhite_Click"/>
-        <Button x:Name="btnFilterHiSatchn" Content="HiSatch" Grid.Column="2" HorizontalAlignment="Left" Margin="59,241,0,0" Grid.Row="1" VerticalAlignment="Top" Width="247" Click="btnFilterHiSatchn_Click"/>
-        <Button x:Name="btnFilterInvert" Content="Invert" Grid.Column="2" HorizontalAlignment="Left" Margin="59,278,0,0" Grid.Row="1" VerticalAlignment="Top" Width="247" Click="btnFilterInvert_Click"/>
-        <Button x:Name="btnFilterComic" Content="Comic" Grid.Column="2" HorizontalAlignment="Left" Margin="59,316,0,0" Grid.Row="1" VerticalAlignment="Top" Width="247" Click="btnFilterComic_Click"/>
+
+        <!--<Image x:Name="sourceImg" Grid.Column="1" Grid.Row="1" Stretch="Uniform" Margin="0,0,0,316"/>
+        <Image x:Name="processedImg" Grid.Column="1" Grid.Row="1" Stretch="Uniform" Margin="0,316,0,0"/>-->
+        <Button x:Name="btnLoad" Content="Load" Grid.Column="1" HorizontalAlignment="Left" Margin="108,48,0,0" VerticalAlignment="Top" Width="75" Click="btnLoad_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnReset" Content="Reset Image" Grid.Column="1" HorizontalAlignment="Left" Margin="108,78,0,0" VerticalAlignment="Top" Width="74" Click="btnReset_Click" Height="20" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnFilterBlackWhite" Content="Black White" HorizontalAlignment="Left" Margin="20,262,0,0" VerticalAlignment="Top" Width="247" Click="btnFilterBlackWhite_Click" Height="20" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnFilterHiSatchn" Content="HiSatch" HorizontalAlignment="Left" Margin="20,297,0,0" VerticalAlignment="Top" Width="247" Click="btnFilterHiSatchn_Click" Height="20" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnFilterInvert" Content="Invert" HorizontalAlignment="Left" Margin="20,334,0,0" VerticalAlignment="Top" Width="247" Click="btnFilterInvert_Click" Height="20" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnFilterComic" Content="Comic" HorizontalAlignment="Left" Margin="20,372,0,0" VerticalAlignment="Top" Width="247" Click="btnFilterComic_Click" Height="20" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnSave" Content="Save" Grid.Column="1" HorizontalAlignment="Left" Margin="107,589,0,0" VerticalAlignment="Top" Width="75" Height="20" Grid.ColumnSpan="2" Click="btnSave_Click"/>
+        <Button x:Name="btnLomograph" Content="Lomograph" HorizontalAlignment="Left" Margin="20,410,0,0" VerticalAlignment="Top" Width="247" Height="20" Grid.Column="1" Click="btnLomograph_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnLoSatch" Content="LoSatch" HorizontalAlignment="Left" Margin="20,478,0,0" VerticalAlignment="Top" Width="247" Height="20" Grid.Column="1" Click="btnLoSatch_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnPolaroid" Content="Polaroid" HorizontalAlignment="Left" Margin="20,444,0,0" VerticalAlignment="Top" Width="247" Height="20" Grid.Column="1" Click="btnPolaroid_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnSepia" Content="Sepia" HorizontalAlignment="Left" Margin="20,511,0,0" VerticalAlignment="Top" Width="247" Height="20" Grid.Column="1" Click="btnSepia_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnQuality" Content="Quality" Grid.Column="1" HorizontalAlignment="Left" Margin="20,193,0,0" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" Click="btnQuality_Click"/>
+        <Button x:Name="btnPixelate" Content="Pixelate" Grid.Column="1" HorizontalAlignment="Left" Margin="20,156,0,0" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" Click="btnPixelate_Click"/>
     </Grid>
 </Window>
