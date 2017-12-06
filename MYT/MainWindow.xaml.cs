@@ -36,8 +36,9 @@ namespace MYT
 
         private string _imgPath = null;
         private BitmapImage _processedImage = null;
-        private ProcessedImage _processedWindow = null;
 
+        private ProcessedImage _processedWindow = null;
+        private OriginalImage _originalWindow = null;
 
         private bool Load()
         {
@@ -58,6 +59,14 @@ namespace MYT
             _processedWindow.Show();
         }
 
+        private void DisplayOriginalWindow()
+        {
+            if (_originalWindow == null || !_originalWindow.IsVisible)
+                _originalWindow = new OriginalImage { Owner = this };
+
+            _originalWindow.image.Source = new BitmapImage(new Uri(_imgPath));
+            _originalWindow.Show();
+        }
 
 
         private void btnLoad_Click(object sender, RoutedEventArgs e)
@@ -71,13 +80,8 @@ namespace MYT
             if (op.ShowDialog() == true)
             {
                 _imgPath = op.FileName;
-                //sourceImg.Source = new BitmapImage(new Uri(_imgPath));
-                //processedImg.Source = new BitmapImage(new Uri(_imgPath));
 
-                OriginalImage imageWindow = new OriginalImage { Owner = this };
-                imageWindow.image.Source = new BitmapImage(new Uri(_imgPath));
-
-                imageWindow.Show();
+                DisplayOriginalWindow();
 
                 ImageModifications.Initialize(_imgPath);
             }
