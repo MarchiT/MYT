@@ -11,11 +11,11 @@ using System.Windows.Media.Imaging;
 
 namespace MYT.ImageOperations
 {
-    class ImageModifications
+    static class ImageModifications
     {
         private static ImageFactory _factory = null;
 
-
+        //Preps the in stream for the upcoming operations
         public static void Initialize(String path)
         {
             byte[] photoBytes = File.ReadAllBytes(path);
@@ -26,7 +26,7 @@ namespace MYT.ImageOperations
             }
         }
 
-
+        //Recives an IMartixFilter parameter and applies it 
         public static BitmapImage Filter(IMatrixFilter filter)
         {
             using (MemoryStream outStream = new MemoryStream())
@@ -37,6 +37,7 @@ namespace MYT.ImageOperations
             }
         }
 
+        //Changes the image quality to the given percentage
         public static BitmapImage Quality(int percentage)
         {
             using (MemoryStream outStream = new MemoryStream())
@@ -47,6 +48,7 @@ namespace MYT.ImageOperations
             }
         }
 
+        //Pixelates the image to pixels according to the given pixelSize
         public static BitmapImage Pixelate(int pixelSize)
         {
             using (MemoryStream outStream = new MemoryStream())

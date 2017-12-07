@@ -12,6 +12,7 @@ namespace MYT.ImageOperations
 {
     class Converter
     {
+        //Converts out stream to a BitmapImage
         public static BitmapImage ToBitmap(MemoryStream outStream)
         {
             outStream.Seek(0, SeekOrigin.Begin);
@@ -25,6 +26,7 @@ namespace MYT.ImageOperations
             return bitmapImage;
         }
 
+        //Converts BitmapSource to Bitmap
         public static System.Drawing.Bitmap BitmapSourceToBitmap(BitmapSource srs)
         {
             int width = srs.PixelWidth;
@@ -37,8 +39,8 @@ namespace MYT.ImageOperations
                 srs.CopyPixels(new Int32Rect(0, 0, width, height), ptr, height * stride, stride);
                 using (var btm = new System.Drawing.Bitmap(width, height, stride, System.Drawing.Imaging.PixelFormat.Format1bppIndexed, ptr))
                 {
-                    // Clone the bitmap so that we can dispose it and
-                    // release the unmanaged memory at ptr
+                    // Clones the bitmap in order to dispose it and
+                    // releases the unmanaged memory at ptr
                     return new System.Drawing.Bitmap(btm);
                 }
             }

@@ -24,6 +24,7 @@ namespace MYT
             InitializeComponent();
         }
 
+        //Initialize logic for the newly opened Original Image Window
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             Application.Current.MainWindow.WindowState = WindowState.Normal;

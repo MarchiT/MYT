@@ -63,3 +63,25 @@ D:\Programming\WPF\MYT\MYT\obj\Debug\MYT.csproj.GenerateResource.Cache
 D:\Programming\WPF\MYT\MYT\obj\Debug\MYT.csproj.CoreCompileInputs.cache
 D:\Programming\WPF\MYT\MYT\obj\Debug\MYT.exe
 D:\Programming\WPF\MYT\MYT\obj\Debug\MYT.pdb
+D:\Programming\KGM Repo\MYT\bin\Debug\MYT.exe.config
+D:\Programming\KGM Repo\MYT\bin\Debug\MYT.exe
+D:\Programming\KGM Repo\MYT\bin\Debug\MYT.pdb
+D:\Programming\KGM Repo\MYT\bin\Debug\ImageProcessor.dll
+D:\Programming\KGM Repo\MYT\bin\Debug\ImageProcessor.xml
+D:\Programming\KGM Repo\MYT\obj\Debug\MYT.csprojResolveAssemblyReference.cache
+D:\Programming\KGM Repo\MYT\obj\Debug\MainWindow.g.cs
+D:\Programming\KGM Repo\MYT\obj\Debug\OriginalImage.g.cs
+D:\Programming\KGM Repo\MYT\obj\Debug\ProcessedImage.g.cs
+D:\Programming\KGM Repo\MYT\obj\Debug\App.g.cs
+D:\Programming\KGM Repo\MYT\obj\Debug\MYT_MarkupCompile.cache
+D:\Programming\KGM Repo\MYT\obj\Debug\MYT_MarkupCompile.lref
+D:\Programming\KGM Repo\MYT\obj\Debug\App.baml
+D:\Programming\KGM Repo\MYT\obj\Debug\MainWindow.baml
+D:\Programming\KGM Repo\MYT\obj\Debug\OriginalImage.baml
+D:\Programming\KGM Repo\MYT\obj\Debug\ProcessedImage.baml
+D:\Programming\KGM Repo\MYT\obj\Debug\MYT.g.resources
+D:\Programming\KGM Repo\MYT\obj\Debug\MYT.Properties.Resources.resources
+D:\Programming\KGM Repo\MYT\obj\Debug\MYT.csproj.GenerateResource.Cache
+D:\Programming\KGM Repo\MYT\obj\Debug\MYT.csproj.CoreCompileInputs.cache
+D:\Programming\KGM Repo\MYT\obj\Debug\MYT.exe
+D:\Programming\KGM Repo\MYT\obj\Debug\MYT.pdb
