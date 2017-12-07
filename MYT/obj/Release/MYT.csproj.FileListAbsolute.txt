@@ -34,3 +34,25 @@ D:\Programming\WPF\Repos\MYT\obj\Release\MYT.csproj.GenerateResource.Cache
 D:\Programming\WPF\Repos\MYT\obj\Release\MYT.csproj.CoreCompileInputs.cache
 D:\Programming\WPF\Repos\MYT\obj\Release\MYT.exe
 D:\Programming\WPF\Repos\MYT\obj\Release\MYT.pdb
+D:\Programming\KGM Repo\MYT\bin\Release\MYT.exe.config
+D:\Programming\KGM Repo\MYT\bin\Release\MYT.exe
+D:\Programming\KGM Repo\MYT\bin\Release\MYT.pdb
+D:\Programming\KGM Repo\MYT\bin\Release\ImageProcessor.dll
+D:\Programming\KGM Repo\MYT\bin\Release\ImageProcessor.xml
+D:\Programming\KGM Repo\MYT\obj\Release\MYT.csprojResolveAssemblyReference.cache
+D:\Programming\KGM Repo\MYT\obj\Release\MainWindow.g.cs
+D:\Programming\KGM Repo\MYT\obj\Release\OriginalImage.g.cs
+D:\Programming\KGM Repo\MYT\obj\Release\ProcessedImage.g.cs
+D:\Programming\KGM Repo\MYT\obj\Release\App.g.cs
+D:\Programming\KGM Repo\MYT\obj\Release\MYT_MarkupCompile.cache
+D:\Programming\KGM Repo\MYT\obj\Release\MYT_MarkupCompile.lref
+D:\Programming\KGM Repo\MYT\obj\Release\App.baml
+D:\Programming\KGM Repo\MYT\obj\Release\MainWindow.baml
+D:\Programming\KGM Repo\MYT\obj\Release\OriginalImage.baml
+D:\Programming\KGM Repo\MYT\obj\Release\ProcessedImage.baml
+D:\Programming\KGM Repo\MYT\obj\Release\MYT.g.resources
+D:\Programming\KGM Repo\MYT\obj\Release\MYT.Properties.Resources.resources
+D:\Programming\KGM Repo\MYT\obj\Release\MYT.csproj.GenerateResource.Cache
+D:\Programming\KGM Repo\MYT\obj\Release\MYT.csproj.CoreCompileInputs.cache
+D:\Programming\KGM Repo\MYT\obj\Release\MYT.exe
+D:\Programming\KGM Repo\MYT\obj\Release\MYT.pdb

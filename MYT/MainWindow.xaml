@@ -6,7 +6,21 @@
         xmlns:local="clr-namespace:MYT"
         mc:Ignorable="d"
         Title="MYT" Height="700" Width="350">
-    <Grid Margin="0,0,-8,0">
+
+
+    <Window.Resources>
+
+        <VisualBrush x:Key="myBrush">
+            <VisualBrush.Visual>
+                <Grid>
+                    <Rectangle Fill="Red"/>
+                    <Image x:Name="Image" Source="Images/4.png"/>
+                </Grid>
+            </VisualBrush.Visual>
+        </VisualBrush>
+    </Window.Resources>
+
+    <Grid Margin="0,0,-8,0" Background="{StaticResource myBrush}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30*"/>
             <ColumnDefinition Width="145*"/>
@@ -18,16 +32,16 @@
         <Image x:Name="processedImg" Grid.Column="1" Grid.Row="1" Stretch="Uniform" Margin="0,316,0,0"/>-->
         <Button x:Name="btnLoad" Content="Load" Grid.Column="1" HorizontalAlignment="Left" Margin="108,48,0,0" VerticalAlignment="Top" Width="75" Click="btnLoad_Click" Grid.ColumnSpan="2"/>
         <Button x:Name="btnReset" Content="Reset Image" Grid.Column="1" HorizontalAlignment="Left" Margin="108,78,0,0" VerticalAlignment="Top" Width="74" Click="btnReset_Click" Height="20" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnFilterBlackWhite" Content="Black White" HorizontalAlignment="Left" Margin="20,262,0,0" VerticalAlignment="Top" Width="247" Click="btnFilterBlackWhite_Click" Height="20" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnFilterHiSatchn" Content="HiSatch" HorizontalAlignment="Left" Margin="20,297,0,0" VerticalAlignment="Top" Width="247" Click="btnFilterHiSatchn_Click" Height="20" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnFilterInvert" Content="Invert" HorizontalAlignment="Left" Margin="20,334,0,0" VerticalAlignment="Top" Width="247" Click="btnFilterInvert_Click" Height="20" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnFilterComic" Content="Comic" HorizontalAlignment="Left" Margin="20,372,0,0" VerticalAlignment="Top" Width="247" Click="btnFilterComic_Click" Height="20" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnFilterBlackWhite" Content="Black White" HorizontalAlignment="Left" Margin="20,471,0,0" VerticalAlignment="Top" Width="247" Click="btnFilterBlackWhite_Click" Height="20" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnFilterHiSatchn" Content="HiSatch" HorizontalAlignment="Left" Margin="20,279,0,0" VerticalAlignment="Top" Width="247" Click="btnFilterHiSatchn_Click" Height="20" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnFilterInvert" Content="Invert" HorizontalAlignment="Left" Margin="20,335,0,0" VerticalAlignment="Top" Width="247" Click="btnFilterInvert_Click" Height="20" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnFilterComic" Content="Comic" HorizontalAlignment="Left" Margin="20,369,0,0" VerticalAlignment="Top" Width="247" Click="btnFilterComic_Click" Height="20" Grid.Column="1" Grid.ColumnSpan="2"/>
         <Button x:Name="btnSave" Content="Save" Grid.Column="1" HorizontalAlignment="Left" Margin="107,589,0,0" VerticalAlignment="Top" Width="75" Height="20" Grid.ColumnSpan="2" Click="btnSave_Click"/>
-        <Button x:Name="btnLomograph" Content="Lomograph" HorizontalAlignment="Left" Margin="20,410,0,0" VerticalAlignment="Top" Width="247" Height="20" Grid.Column="1" Click="btnLomograph_Click" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnLoSatch" Content="LoSatch" HorizontalAlignment="Left" Margin="20,478,0,0" VerticalAlignment="Top" Width="247" Height="20" Grid.Column="1" Click="btnLoSatch_Click" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnPolaroid" Content="Polaroid" HorizontalAlignment="Left" Margin="20,444,0,0" VerticalAlignment="Top" Width="247" Height="20" Grid.Column="1" Click="btnPolaroid_Click" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnSepia" Content="Sepia" HorizontalAlignment="Left" Margin="20,511,0,0" VerticalAlignment="Top" Width="247" Height="20" Grid.Column="1" Click="btnSepia_Click" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnQuality" Content="Quality" Grid.Column="1" HorizontalAlignment="Left" Margin="20,193,0,0" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" Click="btnQuality_Click"/>
-        <Button x:Name="btnPixelate" Content="Pixelate" Grid.Column="1" HorizontalAlignment="Left" Margin="20,156,0,0" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" Click="btnPixelate_Click"/>
+        <Button x:Name="btnLomograph" Content="Lomograph" HorizontalAlignment="Left" Margin="20,403,0,0" VerticalAlignment="Top" Width="247" Height="20" Grid.Column="1" Click="btnLomograph_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnLoSatch" Content="LoSatch" HorizontalAlignment="Left" Margin="20,245,0,0" VerticalAlignment="Top" Width="247" Height="20" Grid.Column="1" Click="btnLoSatch_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnPolaroid" Content="Polaroid" HorizontalAlignment="Left" Margin="20,437,0,0" VerticalAlignment="Top" Width="247" Height="20" Grid.Column="1" Click="btnPolaroid_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnSepia" Content="Sepia" HorizontalAlignment="Left" Margin="20,505,0,0" VerticalAlignment="Top" Width="247" Height="20" Grid.Column="1" Click="btnSepia_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnQuality" Content="Quality" Grid.Column="1" HorizontalAlignment="Left" Margin="20,191,0,0" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" Click="btnQuality_Click"/>
+        <Button x:Name="btnPixelate" Content="Pixelate" Grid.Column="1" HorizontalAlignment="Left" Margin="20,160,0,0" VerticalAlignment="Top" Width="247" Grid.ColumnSpan="2" Click="btnPixelate_Click"/>
     </Grid>
 </Window>
