@@ -28,7 +28,7 @@ namespace MYT
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             Application.Current.MainWindow.WindowState = WindowState.Normal;
-            image.Focus();
+            //image.Focus();
         }
     }
 }

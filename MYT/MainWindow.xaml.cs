@@ -284,5 +284,16 @@ namespace MYT
                 NotLoadedMessage();
             }
         }
+
+        //Asks before closing the application
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to close?", "MYT", MessageBoxButton.YesNoCancel);
+            if (result == MessageBoxResult.Cancel || result == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
     }
 }
